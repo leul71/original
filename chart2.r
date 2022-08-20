@@ -8,9 +8,9 @@ banned_clothes <- read.csv("https://raw.githubusercontent.com/the-pudding/data/m
 
 #create chart
 banned_clothes %>%
-  ggplot(aes(x=slug, y = n)) +
-  geom_bar(stat="identity", fill="red", alpha=.6, width=.4) +
-  labs(title = "Amount of schools that ban a piece of clothing",
+ ggplot(aes(x=slug, y = n)) +
+   geom_bar(stat="identity", fill="red", alpha=.6, width=.4) +
+   labs(title = "Amount of schools that ban a piece of clothing",
        y = "Number of schools that ban clothing piece",
        x = "Clothing item") +
   coord_flip() +

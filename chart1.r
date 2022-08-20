@@ -20,7 +20,7 @@ state_data <- clothing_limits %>%
   group_by(state_fullname) %>% 
   summarize(num_limits = n())
 
-state_shape_data <- left_join(state_shape_map, state_data,
+state_shape_data <- left_join(state_shape, state_data,
                               by = c("region" = "state_fullname"))
 
 ggplot(state_shape_data) + 
